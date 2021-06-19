@@ -24,12 +24,17 @@ public class Main {
             System.out.print("Enter a second number to check: ");
             float m = in.nextFloat();
 
-            float h1 = h - 10;
-            float m1 = m - 10;
-            if (h1 > m1){
+            float h1 = h;
+            h1 = h1 - 10;
+            h1 = Math.abs(h1);
+            float m1 = m;
+            m1 = m1 - 10;
+            m1 = Math.abs(m1);
+
+            if (h1 < m1){
                 System.out.println("The first number (" + h + ") is closer to 10 \n");
             }
-            else if (h1 < m1) {
+            else if (h1 > m1) {
                 System.out.println("The second number (" + m + ") is closer to 10 \n");
             }
             else if (h1 == m1) {
